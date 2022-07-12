@@ -13,3 +13,7 @@ netG:
   hidden_dim:         128
   num_layers:         6
   dropout:            0.1
+  init_type: "none"
+  use_mdn: false
+  num_gaussians: 8
+  dim_wise: true
