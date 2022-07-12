@@ -75,7 +75,19 @@ if [ ${stage} -le 5 ] && [ ${stop_stage} -ge 5 ]; then
     . $NNSVS_COMMON_ROOT/generate.sh || exit 1;
 fi
 
+# Skipping synthesis step.
+
 if [ ${stage} -le 6 ] && [ ${stop_stage} -ge 6 ]; then
+    echo "stage 6: Prepare input/output features for post-filter"
+    . $NNSVS_COMMON_ROOT/prepare_postfilter.sh
+fi
+
+if [ ${stage} -le 7 ] && [ ${stop_stage} -ge 7 ]; then
+    echo "stage 7: Training post-filter"
+    . $NNSVS_COMMON_ROOT/train_postfilter.sh
+fi
+
+if [ ${stage} -le 10 ] && [ ${stop_stage} -ge 10 ]; then
     echo "#  stage 7: Release preparation          #"
     python prepare_release.py $CONFIG_PATH || exit 1;
 fi
