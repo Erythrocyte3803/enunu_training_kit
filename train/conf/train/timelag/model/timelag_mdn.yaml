@@ -10,3 +10,4 @@ netG:
   num_layers: 3
   num_gaussians: 4
   dim_wise: false
+  init_type: "none"
