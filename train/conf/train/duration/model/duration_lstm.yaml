@@ -12,3 +12,4 @@ netG:
   num_layers:         2
   bidirectional:      true
   dropout:            0.5
+  init_type: "none"
