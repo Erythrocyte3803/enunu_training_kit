@@ -75,12 +75,7 @@ if [ ${stage} -le 5 ] && [ ${stop_stage} -ge 5 ]; then
     . $NNSVS_COMMON_ROOT/generate.sh || exit 1;
 fi
 
-# if [ ${stage} -le 6 ] && [ ${stop_stage} -ge 6 ]; then
-#     echo "stage 6: Waveform synthesis"
-#     . $NNSVS_COMMON_ROOT/synthesis.sh
-# fi
-
-if [ ${stage} -le 7 ] && [ ${stop_stage} -ge 7 ]; then
+if [ ${stage} -le 6 ] && [ ${stop_stage} -ge 6 ]; then
     echo "#  stage 7: Release preparation          #"
     python prepare_release.py $CONFIG_PATH || exit 1;
 fi
