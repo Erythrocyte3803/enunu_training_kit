@@ -16,3 +16,10 @@ netG:
   use_mdn: false
   num_gaussians: 8
   dim_wise: true
+
+  in_lf0_idx: 389
+  out_lf0_idx: 180
+  in_lf0_min: null
+  in_lf0_max: null
+  out_lf0_mean: null
+  out_lf0_scale: null
