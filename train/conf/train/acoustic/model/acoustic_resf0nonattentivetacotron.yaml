@@ -24,7 +24,7 @@ netG:
   postnet_layers: 5
   postnet_channels: 512
   postnet_kernel_size: 5
-  postnet_dropout: 0.5
+  postnet_dropout: 0.0
   # other
   reduction_factor: 2
   init_type: "none"
