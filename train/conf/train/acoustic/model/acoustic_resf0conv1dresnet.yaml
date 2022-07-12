@@ -15,7 +15,7 @@ netG:
   init_type: "none"
   use_mdn: false
   num_gaussians: 8
-  dim_wise: false
+  dim_wise: true
 
   in_lf0_idx: 323
   out_lf0_idx: 180
