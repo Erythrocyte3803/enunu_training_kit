@@ -15,6 +15,7 @@ netG:
   num_lstm_layers: 2
   bidirectional: true
   skip_inputs: false
+  dropout: 0.1
   init_type: "none"
   use_mdn: false
   num_gaussians: 8
