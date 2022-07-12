@@ -13,4 +13,5 @@ dev:
 # data loader
 num_workers:  2
 batch_size:   8
+sample_rate: 44100
 pin_memory:   true
