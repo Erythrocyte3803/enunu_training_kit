@@ -9,5 +9,5 @@ netG:
   hidden_dim: 256
   num_layers: 3
   num_gaussians: 4
-  dim_wise: false
+  dim_wise: true
   init_type: "none"
