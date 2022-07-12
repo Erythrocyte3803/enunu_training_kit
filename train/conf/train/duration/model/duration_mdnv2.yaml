@@ -7,6 +7,7 @@ netG:
   in_dim: 368
   out_dim: 1
   hidden_dim: 256
+  dropout: 0.5
   num_layers: 3
   num_gaussians: 4
   dim_wise: true
