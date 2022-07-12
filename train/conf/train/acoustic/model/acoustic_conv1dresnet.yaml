@@ -7,7 +7,7 @@ num_windows:          3
 stream_weights:
 
 netG:
-  _target_: nnsvs.acoustic_models.Conv1dResnet
+  _target_: nnsvs.model.Conv1dResnet
   in_dim: 372
   out_dim: 199
   hidden_dim: 256
