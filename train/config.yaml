@@ -26,7 +26,9 @@ stage0:
 timelag_features:           defaults
 duration_features:          defaults
 acoustic_features:          static_deltadelta
- d4c_threshold:            0.6
+
+trajectory_smoothing: false
+trajectory_smoothing_cutoff: 50
 
 # stage 4
 acoustic_model:             acoustic_conv1dresnet
@@ -52,3 +54,8 @@ acoustic_synthesis:         defaults
 timelag_eval_checkpoint:    best_loss.pth
 duration_eval_checkpoint:   best_loss.pth
 acoustic_eval_checkpoint:   best_loss.pth
+
+# vocoder stuff (stage 8)
+vocoder_model:
+pretrained_vocoder_checkpoint:
+vocoder_eval_checkpoint:
