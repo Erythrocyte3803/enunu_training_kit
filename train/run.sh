@@ -11,9 +11,8 @@ function xrun () {
 CONFIG_PATH="config.yaml"
 
 script_dir=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
-NNSVS_ROOT="/content/nnsvs"
-NNSVS_COMMON_ROOT="/content/nnsvs/recipes/_common/spsvs"
-. "$NNSVS_ROOT/utils/yaml_parser.sh" || exit 1;
+NNSVS_COMMON_ROOT="scripts"
+. "$NNSVS_COMMON_ROOT/yaml_parser.sh" || exit 1;
 
 eval $(parse_yaml $CONFIG_PATH "")
 
@@ -30,7 +29,7 @@ dump_norm_dir="$dumpdir/$spk/norm"
 stage=0
 stop_stage=-1
 
-. $NNSVS_ROOT/utils/parse_options.sh || exit 1;
+. $NNSVS_COMMON_ROOT/parse_options.sh || exit 1;
 
 
 if [ -z ${tag:=} ]; then
