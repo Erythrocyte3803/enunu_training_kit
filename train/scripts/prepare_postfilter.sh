@@ -6,6 +6,8 @@ if [[ -z ${trajectory_smoothing+x} ]]; then
     trajectory_smoothing_cutoff=50
 fi
 
+acoustic_model=acoustic
+
 mkdir -p $expdir/$acoustic_model/norm/
 python $NNSVS_COMMON_ROOT/extract_static_scaler.py \
     $dump_norm_dir/out_acoustic_scaler.joblib \
