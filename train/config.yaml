@@ -56,6 +56,11 @@ timelag_eval_checkpoint:    best_loss.pth
 duration_eval_checkpoint:   best_loss.pth
 acoustic_eval_checkpoint:   best_loss.pth
 
+# postfilter stuff
+postfilter_model:              postfilter_bap
+postfilter_train:              bap
+postfilter_data:               myconfig
+
 # vocoder stuff (stage 8)
 vocoder_model:
 pretrained_vocoder_checkpoint:
