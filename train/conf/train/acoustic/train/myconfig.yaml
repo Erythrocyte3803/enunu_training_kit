@@ -1,5 +1,5 @@
 out_dir: exp
-log_dir: tensorboard/exp
+log_dir: tensorboard/exp/acoustic
 
 use_amp: true
 
