@@ -1,6 +1,3 @@
-# NOTE: the script is supposed to be used called from nnsvs recipes.
-# Please don't try to run the shell script directory.
-
 if [ -d conf/train ]; then
     ext="--config-dir conf/train_resf0/acoustic"
 else
