@@ -12,7 +12,7 @@ netG:
   hidden_dim: 512
   num_layers: 5
   kernel_size: 5
-  dropout: 0.5
+  dropout: 0.4
   init_type: "none"
   use_mdn: false
   num_gaussians: 8
