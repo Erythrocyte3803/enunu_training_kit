@@ -1,5 +1,5 @@
 if [ -d conf/train ]; then
-    ext="--config-dir conf/train_resf0/acoustic"
+    ext="--config-dir conf/train/acoustic"
 else
     ext=""
 fi
@@ -21,6 +21,9 @@ else
 fi
 
 xrun nnsvs-train-resf0 $ext $hydra_opt \
+xrun nnsvs-train-resf0 $ext $hydra_opt \
+    +data.in_scaler_path=$dump_norm_dir/in_acoustic_scaler.joblib \
+    +data.out_scaler_path=$dump_norm_dir/out_acoustic_scaler.joblib \
     model=$acoustic_model train=$acoustic_train data=$acoustic_data \
     data.train_no_dev.in_dir=$dump_norm_dir/$train_set/in_acoustic/ \
     data.train_no_dev.out_dir=$dump_norm_dir/$train_set/out_acoustic/ \
@@ -28,7 +31,6 @@ xrun nnsvs-train-resf0 $ext $hydra_opt \
     data.dev.out_dir=$dump_norm_dir/$dev_set/out_acoustic/ \
     data.in_scaler_path=$dump_norm_dir/in_acoustic_scaler.joblib \
     data.out_scaler_path=$dump_norm_dir/out_acoustic_scaler.joblib \
-    ++data.sample_rate=$sample_rate \
-    train.out_dir=$expdir/${acoustic_model} \
-    train.log_dir=tensorboard/${expname}_${acoustic_model} \
-    train.resume.checkpoint=$resume_checkpoint $post_args
+    train.out_dir=$expdir/acoustic \
+    train.resume.checkpoint=$resume_checkpoint $post_args \
+    ++data.sample_rate=$sample_rate
