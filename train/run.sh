@@ -89,15 +89,15 @@ fi
 # Skipping synthesis step.
 
 # Postfilter stuff
-#if [ ${stage} -le 6 ] && [ ${stop_stage} -ge 6 ]; then
-#    echo "stage 6: Prepare input/output features for post-filter"
-#    . $NNSVS_COMMON_ROOT/prepare_postfilter.sh
-#fi
+if [ ${stage} -le 6 ] && [ ${stop_stage} -ge 6 ]; then
+    echo "stage 6: Prepare input/output features for post-filter"
+    . $NNSVS_COMMON_ROOT/prepare_postfilter.sh
+fi
 
-#if [ ${stage} -le 7 ] && [ ${stop_stage} -ge 7 ]; then
-#    echo "stage 7: Training post-filter"
-#    . $NNSVS_COMMON_ROOT/train_postfilter.sh
-#fi
+if [ ${stage} -le 7 ] && [ ${stop_stage} -ge 7 ]; then
+    echo "stage 7: Training post-filter"
+    . $NNSVS_COMMON_ROOT/train_postfilter.sh
+fi
 
 # Vocoder stuff
 #if [ ${stage} -le 8 ] && [ ${stop_stage} -ge 8 ]; then
