@@ -21,7 +21,6 @@ else
 fi
 
 xrun nnsvs-train-resf0 $ext $hydra_opt \
-xrun nnsvs-train-resf0 $ext $hydra_opt \
     +data.in_scaler_path=$dump_norm_dir/in_acoustic_scaler.joblib \
     +data.out_scaler_path=$dump_norm_dir/out_acoustic_scaler.joblib \
     model=$acoustic_model train=$acoustic_train data=$acoustic_data \
