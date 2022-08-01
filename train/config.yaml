@@ -32,7 +32,7 @@ trajectory_smoothing_cutoff: 50
 
 # stage 4
 # symlink during training in notebook.
-acoustic_model:             acoustic_current
+acoustic_model:             acoustic_conv1dresnet
 acoustic_train:             myconfig
 acoustic_data:              myconfig
 
