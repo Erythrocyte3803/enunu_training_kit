@@ -32,15 +32,15 @@ trajectory_smoothing_cutoff: 50
 
 # stage 4
 # symlink during training in notebook.
-acoustic_model:             acoustic_conv1dresnet
+acoustic_model:             acoustic_custom
 acoustic_train:             myconfig
 acoustic_data:              myconfig
 
-duration_model:             duration_mdnv2
+duration_model:             duration_custom
 duration_train:             myconfig
 duration_data:              myconfig
 
-timelag_model:              timelag_mdnv2
+timelag_model:              timelag_custom
 timelag_train:              myconfig
 timelag_data:               myconfig
 
