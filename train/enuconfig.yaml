@@ -24,9 +24,9 @@ vibrato_scale: 1.0
 ground_truth_duration:  false
 
 # If not empty, try to search statisics in the directory
-stats_dir:              dump/Unnamed/norm
+stats_dir:              dump/unnamed_dyvaux_notebook/norm
 # If not empty, try to search models in the directory
-model_dir:              exp/Unnamed
+model_dir:              exp/unnamed_dyvaux_notebook
 
 acoustic:
     question_path:      hed/chinese.hed
