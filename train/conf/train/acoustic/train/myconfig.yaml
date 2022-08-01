@@ -1,11 +1,20 @@
 # @package _group_
+log_dir: tensorboard/exp/acoustic
 
 out_dir:                    exp
-nepochs:                    50
-checkpoint_epoch_interval:  20
+max_train_steps:            -1
+nepochs:                    60
+checkpoint_epoch_interval:  999999
+
+feats_criterion: mse
 
 stream_wise_loss:           false
-use_detect_anomaly:         true
+use_detect_anomaly:         false
+
+use_amp: true
+
+pitch_reg_weight: 0.6
+force_fix_vuv: True
 
 optim:
   optimizer:

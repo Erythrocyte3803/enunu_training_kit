@@ -1,11 +1,17 @@
 # @package _group_
+log_dir: tensorboard/exp/timelag
 
 out_dir:                    exp
-nepochs:                    50
-checkpoint_epoch_interval:  20
+max_train_steps:            -1
+nepochs:                    200
+checkpoint_epoch_interval:  30
+
+feats_criterion: mse
 
 stream_wise_loss:           false
-use_detect_anomaly:         true
+use_detect_anomaly:         false
+
+use_amp: true
 
 optim:
   optimizer:
