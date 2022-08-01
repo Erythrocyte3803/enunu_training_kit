@@ -1,7 +1,7 @@
 nnsvs_root:                 nnsvs
 spk:                        unnamed
 ## exp tag(for managing experiments)
-tag:                        []
+tag:                        AI
 out_dir:                    data
 
 exclude_songs:              []
