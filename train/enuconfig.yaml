@@ -26,7 +26,7 @@ ground_truth_duration:  false
 # If not empty, try to search statisics in the directory
 stats_dir:              dump/unnamed/norm
 # If not empty, try to search models in the directory
-model_dir:              exp/unnamed
+model_dir:              exp/unnamed_AI
 acoustic:
     question_path:      hed/chinese.hed
     checkpoint:         best_loss.pth
