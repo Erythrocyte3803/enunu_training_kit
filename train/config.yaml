@@ -7,8 +7,8 @@ out_dir:                    data
 
 exclude_songs:              []
 
-table_path:                 dic/DVX_jp.table
-question_path:              hed/DVX_jp.hed
+table_path:                 dic/chinese.table
+question_path:              hed/chinese.hed
 
 sample_rate:                44100
 
