@@ -1,8 +1,7 @@
 nnsvs_root:                 nnsvs
 spk:                        unnamed
 ## exp tag(for managing experiments)
-tag:                        dyvaux_notebook
-
+tag:                        []
 out_dir:                    data
 
 exclude_songs:              []
