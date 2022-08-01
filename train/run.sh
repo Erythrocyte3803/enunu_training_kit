@@ -47,7 +47,7 @@ if [ ${stage} -le 0 ] && [ ${stop_stage} -ge 0 ]; then
     echo ""
     rm -rf $out_dir
     rm -f preprocess_data.py.log
-    python preprocess_data.py $CONFIG_PATH || exit 1;
+    python3.8 preprocess_data.py $CONFIG_PATH || exit 1;
 fi
 
 if [ ${stage} -le 1 ] && [ ${stop_stage} -ge 1 ]; then
@@ -124,7 +124,7 @@ fi
 #        ext=""
 #    fi
 #
-#    xrun python $NNSVS_COMMON_ROOT/scaler_joblib2npy_voc.py \
+#    xrun python3.8 $NNSVS_COMMON_ROOT/scaler_joblib2npy_voc.py \
 #        $dump_norm_dir/out_acoustic_scaler.joblib $dump_norm_dir/ \
 #        --sample_rate $sample_rate $ext
 #fi
@@ -161,5 +161,5 @@ fi
 #Pack it up
 if [ ${stage} -le 12 ] && [ ${stop_stage} -ge 12 ]; then
     echo "#  stage 12: Release preparation          #"
-    python prepare_release.py $CONFIG_PATH || exit 1;
+    python3.8 prepare_release.py $CONFIG_PATH || exit 1;
 fi
