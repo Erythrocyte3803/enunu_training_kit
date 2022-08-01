@@ -45,8 +45,8 @@ def copy_scaler(singer, release_dir):
     """
     dumpフォルダにあるファイルをコピー
     """
-    makedirs(f'{release_dir}/dump/{singer}/norm', exist_ok=True)
-    list_path_scaler = glob(f'dump/{singer}/norm/*_scaler.joblib')
+    makedirs(f'{release_dir}/dump/{singer}_AI/norm', exist_ok=True)
+    list_path_scaler = glob(f'dump/{singer}_AI/norm/*_scaler.joblib')
 
     print('copying scaler')
     for path_scaler in tqdm(list_path_scaler):
