@@ -1,34 +1,29 @@
-out_dir: exp
-log_dir: tensorboard/exp/timelag
+# @package _group_
 
-use_amp: true
+out_dir:                    exp
+nepochs:                    50
+checkpoint_epoch_interval:  20
 
-max_train_steps: -1
-nepochs: 200
-checkpoint_epoch_interval: 30
-
-feats_criterion: mse
-
-stream_wise_loss: false
-use_detect_anomaly: false
+stream_wise_loss:           false
+use_detect_anomaly:         true
 
 optim:
   optimizer:
-    name: RAdam
+    name:                   RAdam
     params:
-      lr: 0.001
-      betas: [0.9, 0.999]
-      weight_decay: 0.000000001
+      lr:                   0.001
+      betas:                [0.9, 0.999]
+      weight_decay:         0.0
   lr_scheduler:
-    name: StepLR
+    name:                   StepLR
     params:
-      step_size: 20
-      gamma: 0.5
+      step_size:            20
+      gamma:                0.5
 
 resume:
   checkpoint:
-  load_optimizer: false
+  load_optimizer:           false
 
 cudnn:
-  benchmark: false
-  deterministic: true
+  benchmark:                false
+  deterministic:            true
