@@ -9,7 +9,7 @@ fi
 acoustic_model=acoustic
 
 mkdir -p $expdir/acoustic/norm/
-python $NNSVS_COMMON_ROOT/extract_static_scaler.py \
+python3.8 $NNSVS_COMMON_ROOT/extract_static_scaler.py \
     $dump_norm_dir/out_acoustic_scaler.joblib \
     $expdir/acoustic/model.yaml \
     $dump_norm_dir/out_postfilter_scaler.joblib
